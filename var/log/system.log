@@ -1,0 +1,14 @@
+[2025-01-07T04:53:36.671118+00:00] main.INFO: Source table payment_services_order_status_data_production_submitted_hash does not exist. Skipping data migration... [] []
+[2025-01-07T04:54:09.382278+00:00] main.ERROR: Unable to apply data patch Magento\Theme\Setup\Patch\Data\RegisterThemes for module Magento_Theme. Original exception message: Wrong file
+#0 D:\xampp\htdocs\cyos1\setup\src\Magento\Setup\Model\Installer.php(1093): Magento\Framework\Setup\Patch\PatchApplier->applyDataPatch('Magento_Theme')
+#1 D:\xampp\htdocs\cyos1\setup\src\Magento\Setup\Model\Installer.php(965): Magento\Setup\Model\Installer->handleDBSchemaData(Object(Magento\Setup\Module\DataSetup), 'data', Array)
+#2 [internal function]: Magento\Setup\Model\Installer->installDataFixtures(Array)
+#3 D:\xampp\htdocs\cyos1\setup\src\Magento\Setup\Model\Installer.php(407): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\cyos1\setup\src\Magento\Setup\Console\Command\InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#5 D:\xampp\htdocs\cyos1\vendor\symfony\console\Command\Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\xampp\htdocs\cyos1\vendor\symfony\console\Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\xampp\htdocs\cyos1\vendor\symfony\console\Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\xampp\htdocs\cyos1\vendor\magento\framework\Console\Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\xampp\htdocs\cyos1\vendor\symfony\console\Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\xampp\htdocs\cyos1\bin\magento(23): Symfony\Component\Console\Application->run()
+#11 {main} [] []

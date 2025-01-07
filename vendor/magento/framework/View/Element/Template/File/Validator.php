@@ -111,7 +111,7 @@ class Validator
      */
     public function isValid($filename)
     {
-        $filename = str_replace('\\', '/', $filename);
+        $filename = str_replace('\\', '/', $this->fileDriver->getRealPath($filename));
         if (!isset($this->_templatesValidationResults[$filename])) {
             $this->_templatesValidationResults[$filename] =
                 ($this->isPathInDirectories($filename, $this->_compiledDir)
@@ -133,11 +133,12 @@ class Validator
     protected function isPathInDirectories($path, $directories)
     {
         if (!is_array($directories)) {
-            $directories = (array)$directories;
+            $directories = (array) $directories;
         }
         $realPath = $this->fileDriver->getRealPath($path);
+        $realPath = str_replace('\\', '/', $realPath); // extra code added
         foreach ($directories as $directory) {
-            if ($directory !== null && 0 === strpos($realPath, $directory)) {
+            if (0 === strpos($realPath, $directory)) {
                 return true;
             }
         }

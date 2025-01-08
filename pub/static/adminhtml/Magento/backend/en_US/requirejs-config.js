@@ -766,6 +766,47 @@ require.config(config);
 })();
 (function() {
 /**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_Core
+ * @copyright   Copyright (c) 2016-2018 Mageplaza (http://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+
+var config = {
+    paths: {
+        'mageplaza/core/jquery/popup': 'Mageplaza_Core/js/jquery.magnific-popup.min',
+        'mageplaza/core/owl.carousel': 'Mageplaza_Core/js/owl.carousel.min',
+        'mageplaza/core/bootstrap': 'Mageplaza_Core/js/bootstrap.min',
+        mpIonRangeSlider: 'Mageplaza_Core/js/ion.rangeSlider.min',
+        touchPunch: 'Mageplaza_Core/js/jquery.ui.touch-punch.min',
+        mpDevbridgeAutocomplete: 'Mageplaza_Core/js/jquery.autocomplete.min'
+    },
+    shim: {
+        "mageplaza/core/jquery/popup": ["jquery"],
+        "mageplaza/core/owl.carousel": ["jquery"],
+        "mageplaza/core/bootstrap": ["jquery"],
+        mpIonRangeSlider: ["jquery"],
+        mpDevbridgeAutocomplete: ["jquery"] 
+    }
+};
+
+require.config(config);
+})();
+(function() {
+/**
  * Config to pull in all the relevant Braintree JS SDKs
  * @type {
  *  paths: {
@@ -807,6 +848,43 @@ var config = {
         'braintreeLpm': 'https://js.braintreegateway.com/web/3.97.2/js/local-payment.min',
         'googlePayLibrary': 'https://pay.google.com/gp/p/js/pay',
         'braintreePayPalInContextCheckout': 'https://www.paypalobjects.com/api/checkout'
+    }
+};
+
+require.config(config);
+})();
+(function() {
+var config = {
+    paths: {
+        'jquery_chosen': 'Smartwave_Dailydeals/js/chosen.jquery.min'
+    },
+    shim: {
+        'jquery_chosen': {
+            deps: ['jquery']
+        }
+    }
+};
+
+require.config(config);
+})();
+(function() {
+var config = {
+    paths: {
+        'owlcarousel': 'Smartwave_Filterproducts/js/owl.carousel/owl.carousel.min',
+        'lazyload': 'Smartwave_Filterproducts/js/lazyload/jquery.lazyload',
+        'imagesloaded': 'Smartwave_Filterproducts/js/imagesloaded',
+        'packery': 'Smartwave_Filterproducts/js/packery.pkgd',
+    },
+    shim: {
+        'owlcarousel': {
+            deps: ['jquery']
+        },
+        'lazyload': {
+            deps: ['jquery']
+        },
+        'packery': {
+            deps: ['jquery','imagesloaded']
+        }
     }
 };
 

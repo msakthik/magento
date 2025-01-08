@@ -354,10 +354,20 @@ return [
         'Magento_Wishlist' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
+        'Mageplaza_Core' => 1,
+        'Mageplaza_AjaxLayer' => 1,
+        'Mageplaza_LayeredNavigation' => 1,
+        'Mageplaza_Search' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeCustomerBalance' => 1,
         'PayPal_BraintreeGiftCardAccount' => 1,
         'PayPal_BraintreeGiftWrapping' => 1,
-        'PayPal_BraintreeGraphQl' => 1
+        'PayPal_BraintreeGraphQl' => 1,
+        'Smartwave_Core' => 1,
+        'Smartwave_Dailydeals' => 1,
+        'Smartwave_Filterproducts' => 1,
+        'Smartwave_Megamenu' => 1,
+        'Smartwave_Porto' => 1,
+        'Smartwave_Socialfeeds' => 1
     ]
 ];
